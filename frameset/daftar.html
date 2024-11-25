@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>SELAMAT DATANG DI SITUS FTIK - USM</title>
+  </head>
+  <style>
+        .container {
+            display: grid;
+            grid-template-columns: 200px 1000fr ;
+            column-gap: 10px;
+        }
+  </style>
+  <body>
+
+    <div class="container">
+      <div class="sidebar">
+        <a href="sejarahsingkat.html"><p>Sejarah Singkat</p></a>
+        <a href="daftar.html"><p>Daftar</p></a>
+        <a href="Fasilitas.html"><p>Fasilitas</p></a>
+        <a href="alumni.html"><p>Alumni</p></a>
+        <a href="infokerja.html"><p>Info Kerja</p></a>
+      </div>
+      <div class="content"><b>
+        <p><b>Formulir Pendaftaran Kursus</b></p>
+        <form name="form_kursus">
+            <table width="100%">
+                <tr>
+                    <td>Nama</td>
+                    <td>:</td>
+                    <td><input type="text" name="nama" size="39"></td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>:</td>
+                    <td><input type="radio" value="L" checked name="nama" >Laki-Laki<input type="radio" value="P" checked name="nama" >Perempuan</td>
+                </tr>
+                <tr>
+                    <td>Alamat</td>
+                    <td>:</td>
+                    <td><input type="text" name="Alamat" size="39"></td>
+                </tr>
+                <tr>
+                    <td>Provinsi</td>
+                    <td>:</td>
+                    <td><select name="provinsi" size="1" >
+                        <option value="">Jawa Barat</option>
+                        <option value="">Jawa Tengah</option>
+                        <option value="">Jawa Timur</option>
+                    </select></td>
+                </tr>
+                <tr>
+                <td>Pilihan Prodi</td>
+                <td>:</td>
+                <td><input type="checkbox" name="kursus" value="inggris">S1 Teknik Informatika
+                <input type="checkbox" name="kursus" value="komputer">S1 Sistem Informasi
+                <input type="checkbox" name="kursus" value="komputer">S1 Ilmu Komunikasi
+                <input type="checkbox" name="kursus" value="komputer">S1 Pariwisata
+            </td>
+                </tr>
+            </table>
+            <p><input type="submit" name="Bsubmit" value="Submit" id=""><input type="reset" name="Reset" name="Reset"></p>
+        </form>
+      </b></div>
+      
+  </div>
+
+    
+  </body>
+</html>
