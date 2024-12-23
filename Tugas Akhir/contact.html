@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Center vertically */
+        margin: 0; /* Remove default margin */
+        background: linear-gradient(to right, #000046, #1cb5e0);
+        font-family: Arial, sans-serif;
+      }
+      .kotak {
+        width: 90%;
+        max-width: 500px;
+        height: auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column; /* Ubah menjadi kolom untuk tampilan mobile */
+        align-items: center; /* Center horizontally */
+        justify-content: center; /* Center vertically */
+        gap: 10px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2),
+          0 6px 10px 0 rgba(0, 0, 0, 0.19); /* Bayangan efek kedalaman */
+        overflow: hidden;
+      }
+      .isi1,
+      .isi2 {
+        width: 100%; /* Ubah menjadi 100% untuk mengisi kotak */
+        border-radius: 10px;
+        background-color: #44abb3;
+        color: white;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2),
+          0 6px 10px 0 rgba(0, 0, 0, 0.19); /* Bayangan efek kedalaman */
+        display: flex;
+        align-items: center; /* Memusatkan item secara vertikal */
+        padding: 10px; /* Tambahkan padding untuk ruang yang lebih baik */
+      }
+      .isi1 img,
+      .isi2 img {
+        width: 100%;
+        max-width: 50px; /* Ubah ukuran gambar agar lebih kecil */
+        height: auto; /* Menjaga rasio aspek gambar */
+        margin-right: 10px; /* Jarak antara gambar dan teks */
+      }
+      .isi1 p,
+      .isi2 p {
+        margin: 0;
+        padding: 0;
+        text-align: left;
+      }
+      @media (min-width: 768px) {
+        .kotak {
+          flex-direction: row; /* Ubah menjadi baris untuk tampilan desktop */
+        }
+        .isi1,
+        .isi2 {
+          width: 100%; /* Ubah lebar untuk tampilan desktop */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="kotak">
+      <div class="isi1">
+        <img src="wa.png" alt="WhatsApp Icon" />
+        <p>+62-895 0144 9515</p>
+      </div>
+
+      <div class="isi2">
+        <img src="ig.png" alt="Instagram Icon" />
+        <p>@ferdbran</p>
+      </div>
+    </div>
+  </body>
+</html>

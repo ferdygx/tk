@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gajah, Semut, Orang Game</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(to right, #000046, #1cb5e0);
+      }
+      .container {
+        width: 400px;
+        height: 400px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2), 0 6px 10px rgba(0, 0, 0, 0.19);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: #06fbff;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      #hasil {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Pilih: gajah, semut, atau orang</h2>
+      <button onclick="play('gajah')">Gajah</button>
+      <button onclick="play('semut')">Semut</button>
+      <button onclick="play('orang')">Orang</button>
+      <div id="hasil"></div>
+    </div>
+
+    <script>
+      function play(playerChoice) {
+        // Menangkap pilihan komputer
+        var compChoice = Math.random();
+        if (compChoice < 0.34) {
+          compChoice = "gajah";
+        } else if (compChoice >= 0.34 && compChoice < 0.67) {
+          compChoice = "orang";
+        } else {
+          compChoice = "semut";
+        }
+
+        // Menentukan hasil
+        var result = "";
+        if (playerChoice === compChoice) {
+          result = "SERI!";
+        } else if (playerChoice === "gajah") {
+          result = compChoice === "orang" ? "MENANG!" : "KALAH!";
+        } else if (playerChoice === "orang") {
+          result = compChoice === "gajah" ? "MENANG!" : "KALAH!";
+        } else if (playerChoice === "semut") {
+          result = compChoice === "orang" ? "MENANG!" : "KALAH!";
+        } else {
+          result = "Memasukan pilihan yang salah!!";
+        }
+
+        // Tampilkan hasil
+        document.getElementById("hasil").innerText =
+          "Kamu memilih: " +
+          playerChoice +
+          " dan Komputer memilih: " +
+          compChoice +
+          "\nMaka hasilnya: Kamu " +
+          result;
+      }
+    </script>
+  </body>
+</html>

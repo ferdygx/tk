@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <style>
+      body {
+        display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 85vh;
+        background: linear-gradient(to right, #000046, #1cb5e0);
+        font-family: Arial, sans-serif;
+        margin: 0; /* Menghilangkan margin default */
+        padding: 0; /* Menghilangkan padding default */
+      }
+      .kotakawal {
+        margin: 0;
+        width: 90%;
+        max-width: 400px;
+        height: auto; /* Mengubah tinggi menjadi auto agar sesuai dengan konten */
+        align-items: center;
+        background-color: white;
+        margin: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2),
+          0 6px 10px 0 rgba(0, 0, 0, 0.19); /* Bayangan untuk efek kedalaman */
+        padding: 10px; /* Menambahkan padding untuk konten */
+        overflow: hidden;
+      }
+      .login {
+        text-align: center;
+      }
+      input[type="text"],
+      input[type="password"],
+      select {
+        width: 90%; /* Mengatur lebar input dan select */
+        padding: 8px; /* Menambahkan padding untuk input */
+        margin: 5px 0; /* Menambahkan margin untuk jarak antar elemen */
+        border: 1px solid #ccc; /* Border untuk input */
+        border-radius: 5px; /* Sudut melengkung pada input */
+      }
+      input[type="submit"],
+      input[type="reset"] {
+        padding: 10px 15px; /* Menambahkan padding untuk tombol */
+        margin-top: 10px; /* Menambahkan margin atas untuk jarak */
+        border: none; /* Menghilangkan border default */
+        border-radius: 5px; /* Sudut melengkung pada tombol */
+        background-color: #1cb5e0; /* Warna latar belakang tombol */
+        color: white; /* Warna teks tombol */
+        cursor: pointer; /* Mengubah kursor saat hover */
+      }
+      input[type="submit"]:hover,
+      input[type="reset"]:hover {
+        background-color: #0a8bbf; /* Warna saat hover */
+      }
+    </style>
+  </head>
+  <script>
+    function ValidasiForm() {
+        if (document.FormTamu.user.value == "") {
+            alert("Kolom user tidak boleh kosong");
+            return false;
+        }
+        if (document.FormTamu.password.value == "") {
+            alert("Kolom password tidak boleh kosong");
+            return false;
+        }
+        return true; // All validations passed
+    }
+</script>
+  <body>
+    <div class="s"></div>
+    <div class="kotakawal">
+      <div class="login">
+        <h1>Login</h1>
+        <form onsubmit="return ValidasiForm()" name="FormTamu" method="post" action="">
+            <table width="100%">
+                <tr>
+                    <td><label for="user">User </label></td>
+                    <td>:</td>
+                    <td><input type="text" id="user" name="user" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password</label></td>
+                    <td>:</td>
+                    <td><input type="password" id="password" name="password" required /></td>
+                </tr>
+            </table>
+            <input type="submit" name="Submit" value="Submit" />
+            <input type="reset" name="Reset" value="Reset" />
+        </form>
+    </div>
+</div>
+    </div>
+  </body>
+</html>

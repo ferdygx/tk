@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background: linear-gradient(to right, #000046, #1cb5e0);
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    .atas {
+      margin: 0;
+      max-width: 100%;
+      padding-top: 4px;
+    }
+    ul {
+      display: flex;
+      justify-content: center; /* Menempatkan konten di tengah secara horizontal */
+      align-items: center; /* Menempatkan konten di tengah secara vertikal */
+      height: 10vh; /* Mengatur tinggi menu */
+      padding: 0;
+    }
+
+    ul li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+      transition: 0.5s;
+    }
+
+    a:focus {
+      font-size: 20px;
+      text-decoration: none;
+      background: black;
+    }
+
+    a:hover {
+      font-size: large;
+      text-decoration: none;
+      background: black;
+    }
+
+    a:active {
+      background: #6900ff;
+      color: black;
+    }
+    @media (max-width: 300px) {
+      ul {
+        flex-direction: column; /* Mengubah arah flex menjadi kolom */
+        height: auto; /* Mengatur tinggi menjadi otomatis */
+      }
+      ul li {
+        margin: 5px 0; /* Mengatur margin untuk item menu */
+      }
+    }
+  </style>
+  <body>
+    <div class="atas">
+      <ul>
+        <li><a href="home.html" target="main">Home</a></li>
+        <li><a href="about.html" target="main">About</a></li>
+        <li><a href="game.html" target="main">Game</a></li>
+        <li><a href="video.html" target="main">Video</a></li>
+        <li><a href="contact.html" target="main">Contact</a></li>
+        <li><a href="login.html" target="main">Login</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

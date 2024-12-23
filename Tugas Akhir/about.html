@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Center vertically */
+        margin: 0; /* Remove default margin */
+        background: linear-gradient(to right, #000046, #1cb5e0);
+        font-family: Arial, sans-serif;
+        padding: 0;
+      }
+
+      .kotakawal {
+        margin: 0 auto;
+        width: 90%; /* Menggunakan persentase untuk responsif */
+        max-width: 1000px; /* Maksimal lebar untuk desktop */
+        height: auto; /* Mengubah tinggi menjadi otomatis */
+        align-items: center;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2), 0 6px 10px rgba(0, 0, 0, 0.19);
+        overflow: hidden; /* Menjaga konten tetap dalam batas kotak */
+      }
+      .grid-container {
+        display: flex;
+        flex-direction: column; /* Default untuk mobile */
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+      }
+      .img {
+        border-radius: 20px;
+        width: 100%; /* Menggunakan 100% untuk responsif */
+        max-width: 450px; /* Maksimal lebar untuk desktop */
+        max-height: 450px;
+        height: 250px;
+        background: no-repeat center/100% url("ganteng.jpg");
+        box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2),
+          0 6px 10px rgba(0, 0, 0, 0.19);
+      }
+      .isi {
+        width: 100%; /* Menggunakan 100% untuk responsif */
+        max-width: 450px; /* Maksimal lebar untuk desktop */
+      }
+
+      /* Media query untuk desktop */
+      @media (min-width: 768px) {
+        .grid-container {
+          flex-direction: row; /* Mengubah menjadi baris untuk desktop */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="kotakawal">
+      <div class="grid-container">
+        <div class="img"><p></p></div>
+        <div class="isi">
+          <p>
+            Halo! Saya adalah seorang mahasiswa semester 1 di Program Studi
+            <b> Teknik Informatika di Universitas Semarang.</b> Saya juga aktif
+            mengikuti <em>bootcamp Decomus</em> untuk mengasah keterampilan dan
+            memperluas wawasan di dunia teknologi. Saya bersemangat untuk
+            mengeksplorasi berbagai inovasi dan tantangan di bidang ini.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

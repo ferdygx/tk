@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(to right, #000046, #1cb5e0);
+        font-family: Arial, sans-serif;
+      }
+      .kotakawal {
+        margin: 0 auto;
+        width: 90%;
+        max-width: 1000px;
+        height: auto;
+        align-items: center;
+        background-color: white;
+        margin: auto;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2),
+          0 6px 10px 0 rgba(0, 0, 0, 0.19); /* Bayangan untuk efek kedalaman */
+        overflow: hidden;
+      }
+
+      .grid-container {
+        display: flex; /* Menggunakan Flexbox untuk menampilkan elemen secara horizontal */
+        flex-direction: column;
+        align-items: center; /* Memusatkan elemen secara vertikal */
+        gap: 20px; /* Jarak antara elemen */
+      }
+      .img {
+        width: 100%;
+        max-width: 450px;
+        height: 450px;
+        background: no-repeat center/100% url("ggtg.jpg");
+        border-radius: 10px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2),
+          0 6px 10px 0 rgba(0, 0, 0, 0.19); /* Bayangan untuk efek kedalaman */
+      }
+
+      .isi h1 {
+        margin: 5px 0; /* Jarak antar elemen h1 */
+        font-size: 60px;
+        color: black;
+      }
+      .isi p {
+        margin: 5px 0; /* Jarak antar elemen p */
+        color: black;
+      }
+      @media (min-width: 768px) {
+        .grid-container {
+          flex-direction: row;
+        }
+      }
+    </style>
+    <script>
+      alert("Selamat Datang");
+    </script>
+  </head>
+  <body>
+    <div class="kotakawal">
+      <div class="grid-container">
+        <div class="img"></div>
+        <div class="isi">
+          <p style="margin: 0; display: inline">HALO SEMUANYA, SAYA</p>
+          <h1 id="">FERDY GIBRAN</h1>
+          <p><b>JAVASCRIPT ENTHUSIAST</b></p>
+          <audio autoplay controls src="kehlani.mp3"></audio>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
